@@ -24,4 +24,17 @@ class MainActivity : AppCompatActivity() {
         registerReceiver(br, filter)
     }
 
+    override fun onPause() {
+        //Se anula aquí, si este fue creado en el onResume()
+        unregisterReceiver(br)
+        super.onPause()
+    }
+
+    override fun onDestroy() {
+        //Se anula aquí, si el receptor fue creado en el onCreate()
+        unregisterReceiver(br)
+        super.onDestroy()
+    }
+
+
 }
