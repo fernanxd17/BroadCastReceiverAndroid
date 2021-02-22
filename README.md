@@ -1,2 +1,2 @@
 # LearningBroadCastandroid
-Aprendiendo sobre la clase BroadCast y sus funciones en Android con Kotlin
+Aprendiendo sobre como recibir emisiones de interes.
