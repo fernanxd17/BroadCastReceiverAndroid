@@ -15,23 +15,23 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val filter = IntentFilter().apply {
+        val intentFilter = IntentFilter().apply {
             addAction(Intent.ACTION_POWER_CONNECTED)
             addAction(Intent.ACTION_AIRPLANE_MODE_CHANGED)
             addAction(Intent.ACTION_POWER_DISCONNECTED)
         }
 
-        registerReceiver(br, filter)
+        registerReceiver(br, intentFilter)
     }
 
     override fun onPause() {
-        //Se anula aquí, si este fue creado en el onResume()
+        //Se anula aquí, a fin de registrarlo varias veces
         unregisterReceiver(br)
         super.onPause()
     }
 
     override fun onDestroy() {
-        //Se anula aquí, si el receptor fue creado en el onCreate()
+        //Se anula aquí, a fin de que no salga del contexto de la activity
         unregisterReceiver(br)
         super.onDestroy()
     }
