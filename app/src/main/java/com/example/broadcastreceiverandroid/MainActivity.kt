@@ -1,11 +1,12 @@
-package com.example.learningbroadcastandroid
+package com.example.broadcastreceiverandroid
 
 import android.content.BroadcastReceiver
 import android.content.Intent
 import android.content.IntentFilter
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.example.learningbroadcastandroid.broadcast.MyBroadcastReceiver
+import com.example.broadcastreceiverandroid.broadcast.MyBroadcastReceiver
+import com.example.learningbroadcastandroid.R
 
 class MainActivity : AppCompatActivity() {
 

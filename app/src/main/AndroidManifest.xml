@@ -9,7 +9,7 @@
         android:supportsRtl="true"
         android:allowBackup="false"
         android:theme="@style/Theme.LearningBroadcastAndroid">
-        <activity android:name=".MainActivity">
+        <activity android:name="com.example.broadcastreceiverandroid.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -19,7 +19,7 @@
 
         <!-- intent-filter especific las emisiones a las que se suscribe este receptor -->
         <receiver
-            android:name=".broadcast.MyBroadcastReceiver"
+            android:name="com.example.broadcastreceiverandroid.broadcast.MyBroadcastReceiver"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
