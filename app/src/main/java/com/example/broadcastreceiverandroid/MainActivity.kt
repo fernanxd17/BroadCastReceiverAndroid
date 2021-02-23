@@ -25,12 +25,6 @@ class MainActivity : AppCompatActivity() {
         registerReceiver(br, intentFilter)
     }
 
-    override fun onPause() {
-        //Se anula aquí, a fin de registrarlo varias veces
-        unregisterReceiver(br)
-        super.onPause()
-    }
-
     override fun onDestroy() {
         //Se anula aquí, a fin de que no salga del contexto de la activity
         unregisterReceiver(br)
